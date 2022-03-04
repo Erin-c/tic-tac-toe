@@ -19,6 +19,7 @@ body {
     display: grid;
     width: 100vw;
     height: 100vh;
+    height: -webkit-fill-available;
     padding: 5vmin;
     box-sizing: border-box;
     grid-template-rows: 1fr 2fr;
@@ -73,6 +74,7 @@ li{
 .square {
     background: #fff;
     border: 1px solid #999;
+    color: black;
     float: left;
     font-size: calc(var(--square-width) * .75);
     font-weight: bold;
