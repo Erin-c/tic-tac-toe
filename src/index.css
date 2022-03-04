@@ -13,13 +13,14 @@
 
 body {
     font: 14px 'Comfortaa', Futura, sans-serif;
+    height: 100vh;
+    height: -webkit-fill-available;
     margin: 0vw;
 }
 .game-container{
     display: grid;
     width: 100vw;
-    height: 100vh;
-    height: -webkit-fill-available;
+    height: 100%;
     padding: 5vmin;
     box-sizing: border-box;
     grid-template-rows: 1fr 2fr;
