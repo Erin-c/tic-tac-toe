@@ -1,0 +1,118 @@
+:root {
+  --window-width: 90vmin;
+  --square-width: calc((var(--window-width) / 10 * 6) / 3);
+}
+
+@font-face {
+	font-family: 'Comfortaa';
+	src: url('Comfortaa-VariableFont_wght.ttf') format('woff2 supports variations'),
+       url('Comfortaa-VariableFont_wght.woff2') format('woff2-variations');
+	font-weight: 100 1000;
+	font-stretch: 25% 151%;
+}
+
+body {
+    font: 14px 'Comfortaa', Futura, sans-serif;
+    margin: 0vw;
+}
+.game-container{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    padding: 5vmin;
+    box-sizing: border-box;
+    grid-template-rows: 1fr 2fr;
+    align-items: flex-start;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.title{
+    font-size: calc(var(--square-width) * 0.5); 
+    margin: 0.25em 0;
+}
+.new{
+    font-weight: bold;
+}
+ol, ul {
+    padding: 0px;
+    list-style-type: none;
+}
+.status {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button-ui{
+    background-color: #8ABD91;
+    color: white;
+    border: none;
+    border-radius: 1em;
+    padding: 0.5em 1em;
+    font-family: inherit;
+}
+.goToButton{
+    color: #8ABD91;
+    color: black;
+    border-style: solid;
+    border-width: 0.125em;
+    border-radius: 50em;
+    border-color: #8ABD91;
+    padding: 0.5em 1em;
+    background-color: transparent;
+    font-family: inherit;
+}
+li{
+    margin: 0.5em 0em;
+}
+.square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: calc(var(--square-width) * .75);
+    font-weight: bold;
+    /* line-height: var(--square-width); */
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: var(--square-width);
+    height: var(--square-width);
+    font-family: inherit;
+}
+.kbd-navigation .square:focus {
+    background: #ddd;
+}
+.game {
+    display: grid;
+    grid-template-columns: minmax(0, 6fr) minmax(0, 4fr);
+    align-items: flex-start;
+}
+.game-info {
+    margin: auto;
+    height: calc(var(--square-width) * 3);
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+}
+.game-board{
+    margin: auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+}
+.board-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.moves-container{
+    height: 100%;
+    overflow: auto;
+}
